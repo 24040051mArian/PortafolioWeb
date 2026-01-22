@@ -1,0 +1,220 @@
+/* --- RESET Y BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7; /* gris muy claro neutro */
+    color: #2c3e50; /* texto principal oscuro */
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #1b2d3f; /* azul grisáceo elegante */
+    color: #ecf0f1;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(194, 32, 32, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: #ecf0f1;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #0a141b; /* azul suave al pasar el mouse */
+}
+
+/* --- SECCIONES --- */
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #34495e;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0a1116;
+    margin: 10px auto 0 auto;
+    border-radius: 3px;
+}
+
+/* --- PROYECTOS --- */
+.contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.proyecto {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.proyecto h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.proyecto a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0e1920;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.proyecto a:hover {
+    background-color: #060d13;
+}
+
+/* --- BOTONES VOLVER --- */
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #060d13;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.volver:hover {
+    background-color: #0b1820;
+}
+
+/* --- TEXTO DESTACADO --- */
+.highlight {
+    background-color: #eaf4fc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #0f171f;
+}
+
+/* --- LISTAS --- */
+ul {
+    margin: 10px 0 20px 25px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ecf0f1;
+    color: #34495e;
+    font-size: 0.95rem;
+    margin-top: 50px;
+    border-top: 1px solid #bdc3c7;
+}
+
+/* --- MAIN CONTENIDO PROYECTOS --- */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- ENCABEZADOS PROYECTOS --- */
+h1, h2, h3 {
+    color: #bdc3c9;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+/* --- EFECTO SUAVE DE LINKS --- */
+a {
+    transition: color 0.3s, background-color 0.3s;
+}
+.btn-proyecto {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 15px 35px;
+
+    background: linear-gradient(135deg, #286fb6, #0b3c85);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+
+    box-shadow: 0 10px 25px rgba(30, 144, 255, 0.35);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-proyecto:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(33, 125, 218, 0.5);
+    background: linear-gradient(135deg, #122136, #04121f);
+}
+
+#info-academica {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #f4f8ff;
+    border-radius: 12px;
+}
+
+#info-academica h2 {
+    color: #0f1b27;
+    margin-bottom: 20px;
+}
+
+#info-academica p {
+    font-size: 1.05rem;
+    margin: 8px 0;
+}
