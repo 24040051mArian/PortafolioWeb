@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Proyecto 3 - Frameworks y APIs</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+/* HEADER */
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header button{
+    background:#142446;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+h1{
+    color:#203052;
+}
+
+.section{
+    margin-bottom:50px;
+}
+
+/* TARJETAS FRAMEWORK */
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    flex:1;
+    min-width:250px;
+}
+
+/* PASOS API */
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.step{
+    background:#435170;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+}
+
+/* CODIGO */
+.code{
+    background:#0f172a;
+    color:#38bdf8;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+    font-family:monospace;
+    overflow:auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Proyecto 3</h2>
+    <button onclick="location.href='index.html'">Regresar</button>
+</header>
+
+<div class="container">
+
+    <h1>Frameworks y Desarrollo de APIs</h1>
+
+    <!-- SECCION 1 -->
+    <div class="section">
+        <h2>Frameworks para el desarrollo de APIs</h2>
+
+        <p>
+            Los frameworks permiten crear aplicaciones orientadas a servicios de manera estructurada,
+            facilitando la creación de APIs, la gestión de rutas, la conexión con bases de datos y la seguridad.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Node.js + Express</h3>
+                <p>Framework ligero para crear APIs REST con JavaScript.</p>
+                <b>Ejemplo:</b> Backend para apps móviles.
+            </div>
+
+            <div class="card">
+                <h3>Laravel</h3>
+                <p>Framework PHP con estructura MVC para desarrollo de APIs.</p>
+                <b>Ejemplo:</b> Sistemas administrativos web.
+            </div>
+
+            <div class="card">
+                <h3>Spring Boot</h3>
+                <p>Framework Java para microservicios empresariales.</p>
+                <b>Ejemplo:</b> Plataformas bancarias.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SECCION 2 -->
+    <div class="section">
+        <h2>Proceso de desarrollo de una API</h2>
+
+        <p>
+            Una API permite la comunicación entre sistemas mediante solicitudes HTTP
+            y el uso de datos en formato JSON.
+        </p>
+
+        <div class="steps">
+            <div class="step">Análisis de requerimientos</div>
+            <div class="step">Diseño de endpoints</div>
+            <div class="step">Desarrollo del servidor</div>
+            <div class="step">Pruebas</div>
+            <div class="step">Documentación</div>
+            <div class="step">Despliegue</div>
+        </div>
+
+        <h3>Ejemplo de API con Express</h3>
+
+        <div class="code">
+const express = require('express');
+const app = express();
+
+app.get('/usuarios', (req, res) => {
+    res.json([
+        { id:1, nombre:"Mariana" },
+        { id:2, nombre:"Melany" }
+    ]);
+});
+
+app.listen(3000);
+        </div>
+
+        <p>
+            Cuando un cliente accede a <b>/usuarios</b>, el servidor responde con datos JSON
+            que pueden ser consumidos por aplicaciones web o móviles.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
